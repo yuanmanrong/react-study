@@ -1,22 +1,20 @@
+/*
+ * @Author: Yuan Man Rong
+ * @Date: 2021-09-07 11:27:32
+ * @LastEditors: Yuan Man Rong
+ * @LastEditTime: 2021-09-07 17:41:19
+ */
 //import Dialog from "./component/Dialog/Dialog.js";
 //import Dialog from "ymr/Dialog/Dialog";
 import Vote from "../src/component/Vote";
 import Life from "../src/component/LifeCycle";
 
-import { createStore } from "redux";
-
-let state = {
-  n: 1,
-  m: 2,
-};
-let reducer = (state, action) => {}; //修改状态
-
-let store = createStore(reducer); //创建容器需要把reducer传递进来，这里登记了所有状态更改的信息。
+import store from "./store";
 
 function App() {
   return (
     <div>
-      <Vote title="流心蛋黄月饼yyds"></Vote>
+      <Vote title="流心蛋黄月饼yyds" store={store}></Vote>
       <Life></Life>
     </div>
   );
