@@ -1,7 +1,7 @@
 //import Dialog from "./component/Dialog/Dialog.js";
 //import Dialog from "ymr/Dialog/Dialog";
-import Vote from "./component/Vote";
-import Life from "./component/LifeCycle";
+import Vote from "../../react-study/src/component/Vote";
+import Life from "../../react-study/src/component/LifeCycle";
 
 function App() {
   return (

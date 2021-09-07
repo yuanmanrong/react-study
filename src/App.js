@@ -1,22 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+//import Dialog from "./component/Dialog/Dialog.js";
+//import Dialog from "ymr/Dialog/Dialog";
+import Vote from "../src/component/Vote";
+import Life from "../src/component/LifeCycle";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Vote title="流心蛋黄月饼yyds"></Vote>
+      <Life></Life>
     </div>
   );
 }
