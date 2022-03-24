@@ -12,10 +12,12 @@
 import { combineReducers } from "redux";
 import vote from "./vote";
 import personal from "./personal";
+import computer from "./computer";
 
 let reducer = combineReducers({
   vote,
   personal,
+  computer
 });
 
 export default reducer;

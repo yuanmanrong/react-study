@@ -7,9 +7,11 @@
 
 /* 合并所有action */
 import vote from "./vote";
+import computer from "./computer"
 
 let action = {
   vote,
+  computer
 };
 
 export default action;
