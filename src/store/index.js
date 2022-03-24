@@ -8,8 +8,10 @@
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import reducer from "./reducer";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 /* 创建store,把reducer导入进来 */
-let store = createStore(reducer,applyMiddleware(thunk));
+// let store = createStore(reducer,applyMiddleware(thunk));
+let store = createStore(reducer,composeWithDevTools(applyMiddleware(thunk)));
 
 export default store;
