@@ -10,9 +10,18 @@ export default class YmrButton extends React.Component {
   // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props);
+    this.state = {
+      list: "abc"
+    }
   }
 
   render() {
-    return <div className="mask"></div>;
+    return <div className="mask">
+      {this.state.list.map(() => {
+        return <button>hahha</button>
+      })
+
+      }
+    </div>;
   }
 }

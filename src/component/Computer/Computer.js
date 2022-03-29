@@ -4,6 +4,7 @@ import store from "../../store/index"
 import action from "../../store/action"
 import {bindActionCreators} from 'redux';
 import { connect } from "react-redux"
+import Button from "../Button/Button"
 
 function mapStoreToProps (state) {
     return {
@@ -22,8 +23,17 @@ class Computer extends React.Component {
     constructor(){
        super()
        this.state = {
-         
+         hasError: ""
        }
+    }
+    static getDerivedStateFromError(err){
+        console.log("aaaa",err)
+        return {
+            hasError: err 
+        }
+    }
+    componentDidCatch() {
+        console.log("出错啦~~");
     }
     // 加法
     handleAdd = () => {
@@ -38,6 +48,8 @@ class Computer extends React.Component {
         // const value = store.getState().computer
         // store.dispatch(action.computer.addAsync(value))
     }
+
+
     render() {
         return(
             <div>
@@ -50,7 +62,8 @@ class Computer extends React.Component {
                 <button onClick={e => this.handleAdd(e)}  type="button" >+</button>
                 <button type="button">-</button>
                 <button type="button">求和为奇数再加</button>
-                <button onClick={e => this.handleAddAsync(e)} type="button">异步加</button>
+                {/* 错误边界测试 */}
+                {this.state.hasError ? <div>组件出错啦~</div> : <Button></Button>}
             </div>
         )
     }

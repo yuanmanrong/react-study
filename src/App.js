@@ -13,7 +13,7 @@ import Computer from "./component/Computer/Computer"; // 普通组件的引入�
 import TestHook from "./component/TestHook";
 import store from "./store";
 
-function App() {
+function App() { 
   return (
     <div>
       {/* 给容器组件单独传递store，但是比较麻烦 store={store}  使用Provider */}
