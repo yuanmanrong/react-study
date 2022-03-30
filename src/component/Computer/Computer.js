@@ -63,7 +63,7 @@ class Computer extends React.Component {
                 <button type="button">-</button>
                 <button type="button">求和为奇数再加</button>
                 {/* 错误边界测试 */}
-                {this.state.hasError ? <div>组件出错啦~</div> : <Button></Button>}
+                {/* {this.state.hasError ? <div>组件出错啦~</div> : <Button></Button>} */}
             </div>
         )
     }

@@ -1,4 +1,5 @@
 import React from "react";
+import {    NavLink, Outlet } from "react-router-dom"
 
 export default function TestHook() {
     // 语法： const [xxx, setxxx] = React.useState(initValue)
@@ -27,6 +28,8 @@ export default function TestHook() {
            <input type="text" ref={myRef} />
            <button onClick={add}>加1</button>
            <button type="button" onClick={handleShow}>点击获取输入框内容</button>
+           <NavLink to="/hook/message">消息</NavLink>
+           <Outlet></Outlet>
        </div>
    )
 }
