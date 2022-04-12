@@ -1,0 +1,33 @@
+@bg-color: #b9d5f1;
+@box-color: #000;
+
+.box{
+    width: 400px;
+    height: 500px;
+    background-color: @bg-color;
+    padding: 20px;
+    &-panel{
+     height: 400px;
+     padding: 5px;
+     border: 2px solid @box-color;
+     position: relative;
+     #snake{
+         &>div{
+             width: 10px;
+             height: 10px;
+             background-color: @box-color;
+             //开启绝对定位
+             position: absolute;
+         }
+     }
+     #food{
+        width: 10px;
+        height: 10px;
+        background-color: @box-color;
+        //开启绝对定位
+        position: absolute;
+        border-radius: 16px;
+        top: 20px;
+     }
+    }
+}

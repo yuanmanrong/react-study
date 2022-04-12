@@ -19,3 +19,7 @@ compilerOptions - 设置与编译流程相关的选项。
 配置参考：https://zhuanlan.zhihu.com/p/29970355
 
 typescript-node-starter脚手架
+
+有tsconfig.json文件 tsc -w 可以监控全部ts文件的变动
+
+启动报错：说是webpack的问题 咱就是可以看看是不是版本不对，或者说你的webpack.config.js文件里面配置的不对; 改了配置要重启哈哈哈哈
