@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .flex-box{
+             display: flex;
+             width: 1000px;
+             text-algin:center;
+        }
+    
+        .item1 {
+            height: 100px;
+            width: 200px;
+            flex: 2 1 0%; /*flex-basis为0%，覆盖width，实际占用0*/
+            background:red;
+        }
+    
+        .item2 {
+            height: 100px;
+            /* width: 300px; */
+            flex: 2 1 auto;  /*flex-basis为auto，width权限更高，占用300*/
+            background:green;
+        }
+    
+        .item3 {
+            height: 100px;
+            flex: 1 1 200px; /*flex-basis为200，占用200*/
+            background:blue;
+        }
+        .box-width{
+            position: absolute;
+            background: yellow;
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+        .span{
+            padding: 10px;
+            margin: 10px;
+            background: blue;
+        }
+        .btn{
+            padding: 10px;
+            margin: 10px;
+            background: green;
+        }
+        .myspan{
+            margin: 10px;
+            padding: 10px;
+            background: green;
+        }
+        .mybtn{
+            margin: 10px;
+            padding: 10px;
+            background: green;
+        }
+        .box{
+            width: 100px;
+            height: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            background: burlywood;
+            border-top: 10px solid transparent ;
+            border-left: 10px solid transparent ;
+            border-right: 10px solid transparent ;
+            border-bottom: 10px solid blue ;
+        }
+    </style>
+</head>
+<script src="./test0529_throttle.js"> </script>
+<body>
+    <!-- <div class="flex-box">
+        <div class="item1">Item1</div>
+        <div class="item2">Item2</div>
+        <div class="item3">Item3</div>
+    </div>  -->
+    <span class="myspan">123</span>
+    <button class="mybtn">123</button>
+    <div class="box"></div>
+</body>
+<script>
+   new PerformanceObserver((entryList) => {
+  for (const entry of entryList.getEntries()) {
+    console.log('LCP candidate:', entry.startTime, entry);
+  }
+}).observe({type: 'paint', buffered: true});
+   /*  window.addEventListener("pagehide", function(){
+        console.log("hideenwqqqq----")
+
+    })
+    document.addEventListener("visibilitychange",function(){
+        console.log("hideen----")
+
+    }) */
+</script>
+</html>
